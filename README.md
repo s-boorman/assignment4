@@ -1,16 +1,18 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Stephen Boorman            |
+| Date         | 03/27/2023                 |
+| Course       | Spring                     |
+| Assignment # | 4                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+Overall, the project goal was to take a legacy interface and make it work nicely with an updated interface without
+modifying the original legacy code. That could potentially be messy and costly, so this is a more simple and elegant
+solution by leveraging the adapter pattern. 
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/s-boorman/assignment4
 
 # Implementation Description 
 
@@ -19,11 +21,28 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+
+For this particular implementation, I do not think the flexibility is as high as previous assignments mostly due to the
+fact that the adapter itself is bound to the "old" and "new" interfaces. If, for example, a new interface were to be
+introduced, there would be some more tinkering to get it all to work nicely
+
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+
+This implementation is a simple as the pattern can be, therefore if the person reading this code is familiar with
+the pattern, it should be fine. If not, they can follow the comments/saliently named classes and methods to work out
+what is going on.
+
 - Describe how you have avoided duplicated code and why it is important.
+
+generally, it is probably a good idea to not duplicate code, but there is some instances of similar code, mostly between
+the two original interfaces and the concrete implementation of them.
+
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
+
+Adapter pattern made the most sense since the intention is to mate two different interfaces into one interface that the
+client uses.
 
 
 # Maven Commands
